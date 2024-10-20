@@ -48,7 +48,7 @@ const SignIn = () => {
           localStorage.setItem('token', response.data.token);
         }
 
-        navigate('/home'); // Redirect to homepage on success
+        navigate('/'); // Redirect to homepage on success
       } else {
         dispatch(signInFailure(response.data.message || 'Login failed'));
         toast.error('Incorrect email or password');
